@@ -9,7 +9,10 @@ class HashMap {
     get(key) {
         const index = this._findSlot(key);
         if (this._hashTable[index] === undefined) {
-            throw new Error('Key error');
+            return `ERROR - key does not exist`
+        }
+        if (this._hashTable[index].key !== key){
+            return `ERROR - key does not exist`
         }
         return this._hashTable[index].value;
     }
@@ -86,3 +89,5 @@ class HashMap {
         return hash >>> 0;
     }
 }
+
+module.exports = HashMap

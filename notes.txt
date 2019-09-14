@@ -42,3 +42,4 @@ Collisions:
             first slot contains pointer to the head of list.
             during collision put the pointer put keys in linked list. (seperate chaining)
     The larger your hash map reuduces the numebr of collisions but obviously would take more memoery.
+    
