@@ -1,0 +1,44 @@
+Hash Maps:
+unordered associations between keys and values. JS objects. 
+
+Key Terms
+    Hash map
+    Capacity
+    Collisions
+    Open addressing
+    Separate chaining
+
+Thinking on Hashmaps
+    -Taking some attribute (key)
+    -use that key to narrow a search
+    -Hashing is mapping a key to its location
+    -Hashmap is data structure that uses concept of hashing.
+    **searching in an unordered linked list vs searching in a hashmap:
+    -linear time vs constant time.
+        -_hashtable: where data is strored. size is static but increasable.
+        -_hashfunction: given a key generates a unique index where the data is stored and obtained.
+
+Terminology breakdown:
+    Hashing:
+        process of mapping key to a position in the hash table.
+    Hash Table: 
+        storage that holds the records (key and any value associated with the key)
+        Hash maps require a hash table.
+        implemented internally using array. each slot holds a key-value pair or is empty.
+    Hash function:
+        maps keys to positions in the hash table. 
+        The hash function takes the key and returns the index where the value is stored.
+        You can then retrieve the value at the index.
+        -good hash function satisfies UNIFORM HASHING each key likely to hash to any n number of slots.
+        -Good hash function distributes keys as evenly as possible among slots in hash table.
+
+Example hash function.- find numeric equivalen of a string ASCII summed together and % by the size.
+
+Collisions:
+    What happens if 2 unique keys hash to the same slot in the array.
+        1. open addressing:
+            during collision, hash the key to empty slot nearest where it should live.
+        2. uses linked lists to hash the keys that run into collision. 
+            first slot contains pointer to the head of list.
+            during collision put the pointer put keys in linked list. (seperate chaining)
+    The larger your hash map reuduces the numebr of collisions but obviously would take more memoery.
